@@ -35,7 +35,11 @@ jobs:
         run: |
           ls
         shell: pwsh
-      # Runs a set of commands using the runners shell
+      
+      - name: Run donet -build
+        run: dotnet.exe publish -c Release -r win-x64
+      
+      # Runs AppScan Step
       - name: Perform HCL AppScan Security Analysis
         env:
           ASOC_KEY: ${{ secrets.ASOC_API_KEY }}
@@ -72,8 +76,8 @@ jobs:
           $bearer_token = $Members.token
           $ProgressPreference = 'SilentlyContinue'
           
-          # ASoC -  download the latest version of SAClientUtil to generate the .irx in preparation for the scan
-          
+          # ASoC -  Download the latest version of SAClientUtil to generate the .irx in preparation for the scan
+          Write-Host "Downloading latest verion of SAClientUtil..."
           Invoke-WebRequest -Uri "https://cloud.appscan.com/api/Local/StaticAnalyzer/ARSATool" -OutFile "saclientutil.zip"
           Expand-Archive -Path "saclientutil.zip" -DestinationPath "saclientutil"
           $SAClientUtilFolder = Get-ChildItem -Path .\saclientutil
