@@ -1,9 +1,9 @@
 # Introduction
 This is an example that demonstrate the ease of use of ASoC's powerful REST API capabilities by integrating ASoC SAST security scan with Github Actions. 
 
-Within 7 simple REST API method calls, we were was able to check out a source code from a github repo, have a SAST scan submitted into ASoC for static analysis and get scan result/report back. 
+Within 7 simple REST API method calls, we are able to check out a source code from a github repo, have a SAST scan submitted into ASoC for a static analysis with full data flow analysis and get return the scan result back in HTML format. 
 
-The example shows the process of scanning a .net core project. The full YAML script is in the file config.yml
+The example shows the process of scanning a .net core project. The full YAML script is in config.yml
 
 # ASoC REST API used in this example 
 
