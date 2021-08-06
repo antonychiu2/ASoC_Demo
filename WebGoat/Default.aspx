@@ -8,6 +8,7 @@
 </asp:Content>
 
 
+
 <asp:Content ID="Content2" ContentPlaceHolderID="BodyContentPlaceholder" runat="server">
     <h1 class="title-regular-4 clearfix">Welcome to WebGoat.NET</h1>
 WebGoat.NET is a purposefully insecure web application - use it to learn and understand about bad 
