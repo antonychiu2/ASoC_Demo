@@ -7,6 +7,7 @@
     This page allows you to add a new user
 </asp:Content>
 
+
 <asp:Content ID="Content2" ContentPlaceHolderID="BodyContentPlaceholder" runat="server">
 <h1 class="title-regular-4 clearfix">Add New User</h1>
 	<%-- 
